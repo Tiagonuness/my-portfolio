@@ -1,115 +1,46 @@
-import { useCallback } from "react";
-import Particles from "react-particles";
-import type { Container, Engine} from "tsparticles-engine";
-import { loadSlim } from "tsparticles-slim";
+import Particles from "./Particles"
+import "./Hero.css"
+import { FaDownload, FaWhatsapp } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    await console.log(container);
-  }, []);
   return (
     <>
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={{
-            background: {
-                color: {
-                    value: "#000000",
-                },
-            },
-            fpsLimit: 120,
-            interactivity: {
-                events: {
-                    onClick: {
-                        enable: true,
-                        mode: "push",
-                    },
-                    onHover: {
-                        enable: true,
-                        mode: "grab",
-                    },
-                    resize: true,
-                },
-                modes: {
-                    push: {
-                        quantity: 4,
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4,
-                    },
-                },
-            },
-            particles: {
-                color: {
-                    value: "#ffffff",
-                },
-                links: {
-                    color: "#ffffff",
-                    distance: 150,
-                    enable: true,
-                    opacity: 0.1,
-                    width: 1,
-                },
-                move: {
-                    direction: "none",
-                    enable: true,
-                    outModes: {
-                        default: "bounce",
-                    },
-                    random: false,
-                    speed: 6,
-                    straight: false,
-                    out_mode: "out",
-                },
-                number: {
-                    density: {
-                        enable: true,
-                        area: 800,
-                    },
-                    value: 80,
-                },
-                opacity: {
-                    value: 0.01,
-                    random: false,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    },
-                    polygon: {
-                    nb_sides: 5
-                    }
-                },
-                size: {
-                    value: { min: 0.1, max: 5 },
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-            },
-            detectRetina: true,
-          }}
-          style={{ position: "absolute", width: "100%", height: "100%", zIndex: 0 }}
-        />
+        <div className="container">
+            <div id="cabecalhoHero" className="col-lg-12">
+                <div id="titulo">
+                    <h1 className="text-white text-center mt-4" id="tituloNome"><span>TIAGO NUNES</span></h1>
+                </div>
+                <div id="area">
+                    <h4 className="text-white text-center mt-2">
+                        <Typewriter
+                            options={{
+                                strings: ['Desenvolvedor Full Stack', 'Analista de Dados'],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                        />
+                    </h4>
+                </div>
+                <div id="buttons" className="text-center mt-4 row col-lg-12 justify-content-center">
+                    <div id="buttonCV" className="col-lg-2">
+                        <button type="button" className="buttonCabecalho col-lg-12">
+                            <i className="me-3"><FaDownload /></i>Download CV
+                        </button>
+                    </div>
+                    <div id="buttonContato" className="col-lg-2">
+                        <button type="button" className="buttonCabecalho col-lg-12">
+                            <span><i className="me-3"><FaWhatsapp /></i>Me Contate</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style={{ position: "relative", zIndex: -1 }}>
+            <Particles />
+        </div>
+        
     </>
   )
 }
