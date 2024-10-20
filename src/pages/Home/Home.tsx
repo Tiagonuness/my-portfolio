@@ -1,4 +1,5 @@
 import Hero from "./sections/Hero/Hero";
+
 import {FaGithub, FaTwitter, FaLinkedin, FaInstagram,} from "react-icons/fa";
 import "./Home.css";
 import RedesSociais from "./infos";
@@ -7,7 +8,7 @@ const Home = () => {
     return (
         <>
             <div className="container">
-                <div id="navbar" className="col-lg-6 mt-2 mx-auto justify-content-center" >
+                <div id="navbar" className="col-lg-6 mt-2 mx-auto justify-content-center fixed-top" >
                     <nav>
                         <div id="bordaNavbar" className="d-flex justify-content-center align-items-center">
                             <ul className="list-unstyled d-flex col-lg-12 mt-2">
@@ -22,17 +23,17 @@ const Home = () => {
                 <div id="iconsPerfis" className="col-lg-1">
                     <ul>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href={RedesSociais.twitter} target="_blank">
                             <FaTwitter/>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href={RedesSociais.github} target="_blank">
                             <FaGithub/>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href={RedesSociais.linkedin} target="_blank">
                             <FaLinkedin/>
                             </a>
                         </li>

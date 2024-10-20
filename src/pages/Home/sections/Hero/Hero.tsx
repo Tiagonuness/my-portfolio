@@ -6,10 +6,10 @@ import Typewriter from "typewriter-effect";
 const Hero = () => {
   return (
     <>
-        <div className="container">
+        <div className="container" id="teste">
             <div id="cabecalhoHero" className="col-lg-12">
                 <div id="titulo">
-                    <h1 className="text-white text-center mt-4" id="tituloNome"><span>TIAGO NUNES</span></h1>
+                    <h1 className="text-white text-center mt-4"><span>TIAGO NUNES</span></h1>
                 </div>
                 <div id="area">
                     <h4 className="text-white text-center mt-2">
@@ -29,20 +29,24 @@ const Hero = () => {
                         </button>
                     </div>
                     <div id="buttonContato" className="col-lg-2">
-                        <button type="button" className="buttonCabecalho col-lg-12">
+                        <button type="button" className="buttonCabecalho col-lg-12" onClick={contatoWhatsapp}>
                             <span><i className="me-3"><FaWhatsapp /></i>Me Contate</span>
                         </button>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div style={{ position: "relative", zIndex: -1 }}>
-            <Particles />
+
+            <div id="particles">
+                <Particles />
+            </div>
         </div>
         
     </>
   )
+}
+
+const contatoWhatsapp = () => {
+    window.open("https://wa.me/5561992451421", "_blank");
 }
 
 export default Hero
