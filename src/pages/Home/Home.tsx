@@ -1,10 +1,10 @@
 import Hero from "./sections/Hero/Hero";
-
 import {FaGithub, FaTwitter, FaLinkedin, FaInstagram,} from "react-icons/fa";
 import "./Home.css";
 import RedesSociais from "./infos";
 
 const Home = () => {
+    
     return (
         <>
             <div className="container">
