@@ -30,10 +30,10 @@ const About: React.FC<AboutProps> = () => {
               Possimus non est minima dolorum eum facilis eligendi, dolor dolores! Dolorum reprehenderit quos eveniet obcaecati similique veniam molestiae placeat amet ullam, autem itaque ea asperiores magnam explicabo, distinctio eum deserunt.
             </p>
           </div>
-          <div className="col-lg-6 d-flex justify-content-center" id="carreira">
-            <div className="row col-lg-12">
-              <div className="col-lg-11">
-                <div className="card bg-dark text-white">
+          <div className="col-lg-6" id="carreira">
+            <div className="row d-flex justify-content-center">
+              <div className="col-lg-9">
+                <div className="card bg-dark text-white" >
                 <div className="card-header"><MdOutlineWork /> Experiências</div>
                   <div className="card-body">
                     <div className="d-flex align-items-center">
@@ -53,7 +53,7 @@ const About: React.FC<AboutProps> = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-11 mt-3">
+              <div className="col-lg-9 mt-3">
                 <div className="card bg-dark text-white">
                   <div className="card-header"><PiStudentFill /> Educação</div>
                   <div className="card-body">

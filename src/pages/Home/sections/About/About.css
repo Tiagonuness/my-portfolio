@@ -27,11 +27,6 @@
     z-index: -1;
 }
   
-.card {
-    border: none;
-    border-radius: 0;
-}
-  
 .card-header {
     background-color: #333;
     font-weight: bold;
