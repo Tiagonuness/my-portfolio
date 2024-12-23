@@ -10,24 +10,52 @@
 }
   
 .verticalTitulo {
-    font-size: 4rem;
+    font-size: 3rem;
     color: #000000;
-    letter-spacing: 30px;
-    margin-left: 110px;
-    position: relative;
+    letter-spacing: 20px;
 }
-  
-.verticalTitulo::after {
-    content: attr(data-shadow);
-    position: absolute;
-    top: 5px;
-    left: 5px;
+
+.tituloTecnlogiasFerramentas {
+    font-size: 3rem;
     color: #000000;
-    opacity: 0.3;
-    z-index: -1;
+    letter-spacing: 10px;
 }
   
 .card-header {
     background-color: #333;
     font-weight: bold;
+}
+
+.carousel-tecnologias {
+  overflow: hidden;
+  width: 100%; /* Ajuste conforme necessário */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.logo-icon {
+  width: 80px; /* Ajuste o tamanho conforme necessário */
+  height: auto;
+  margin: 0 20px;
+  transition: filter 0.3s ease; /* Transição suave para o efeito de cor */
+}
+
+.grayscale {
+  filter: grayscale(100%); /* Deixa a imagem em preto e branco */
+}
+
+/* Animação contínua */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Ajuste para metade do conteúdo duplicado */
+  }
 }

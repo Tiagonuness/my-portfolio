@@ -1,14 +1,15 @@
 import React from 'react';
 import './About.css';
+import Carousel from "./TecnologiasFerramentas";
 import { MdOutlineWork } from "react-icons/md";
 import { PiStudentFill } from "react-icons/pi";
-import { FaPython, FaHtml5, FaCss3Alt, FaBootstrap, FaPhp, FaFileExcel} from "react-icons/fa";
+import { FaPython, FaHtml5, FaCss3Alt, FaBootstrap, FaPhp} from "react-icons/fa";
 import { DiMsqlServer, DiJqueryLogo } from "react-icons/di";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { BsFiletypeSql } from "react-icons/bs";
 import { SiCplusplus } from "react-icons/si";
-import  logoPresidencia  from "../../../../../public/brasaooficialcolorido.png";
-import  logoUnB  from "../../../../../public/logoUnB.png";
+import  logoPresidencia  from "/brasaooficialcolorido.png";
+import  logoUnB  from "/logoUnB.png";
 
 interface AboutProps {}
 
@@ -23,11 +24,12 @@ const About: React.FC<AboutProps> = () => {
           <div className="col-lg-1"></div>
           <div className="col-lg-5" id="descricao">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ratione corporis temporibus enim dicta in nemo voluptatem mollitia repellendus laborum? Quam ut nulla excepturi voluptatum non provident odit libero. Maxime.
-              Officia in consectetur perferendis ipsum autem eos labore quos saepe dicta! Eligendi, eum cumque sequi aspernatur maxime repellat, saepe ratione veniam cupiditate eos sunt animi culpa vel quas. Ullam, eaque?
-              Animi quibusdam ipsa voluptatem eveniet exercitationem provident, voluptate earum debitis architecto esse cumque nemo iure voluptates est officiis deserunt rerum velit. Dolores voluptatem perferendis repellendus soluta sapiente recusandae natus libero.
-              Provident fuga officia aspernatur perspiciatis nesciunt illo, vitae, molestias soluta, maiores reprehenderit voluptas molestiae quod. Aspernatur quod eveniet illum aliquam voluptatem, blanditiis deleniti corrupti voluptatibus unde laudantium a dolorem odio.
-              Possimus non est minima dolorum eum facilis eligendi, dolor dolores! Dolorum reprehenderit quos eveniet obcaecati similique veniam molestiae placeat amet ullam, autem itaque ea asperiores magnam explicabo, distinctio eum deserunt.
+            Meu nome é Tiago Nunes, nasci em 2002 em uma cidade do interior de Pernambuco. Desde criança, sempre fui fascinado por tecnologia e tinha uma curiosidade imensa em entender como as coisas funcionavam.
+            Meu primeiro contato significativo com eletrônicos, além de celulares, foi em 2009, quando ganhei um tablet. Passei horas explorando seus recursos e jogando. No ano seguinte, em 2010, recebi meu primeiro computador, um notebook. Foi um marco importante na minha vida, pois descobri minha paixão por programação. Eu passava horas aprendendo sobre as tecnologias da época, experimentando e até tentando modificar jogos.
+            Em 2018, escrevi meu primeiro código em uma aula de robótica no ensino médio. O projeto consistia em criar um script para Arduino que controlava um ar-condicionado. Essa experiência consolidou meu desejo de cursar Engenharia da Computação na Universidade de Brasília (UnB).
+            Na faculdade, minha curiosidade me levou além da sala de aula. Aprendi diversas linguagens de programação e explorei novos métodos de desenvolvimentos. Grande parte desse conhecimento também foi adquirida por conta própria, através de projetos e estudos independentes.
+            Em 2024, tive a oportunidade de estagiar na Presidência da República. Esse estágio foi uma experiência transformadora, onde aprimorei ainda mais meus conhecimentos em áreas como segurança da informação, experiência do usuário, linguagens SQL, análise de dados e outras habilidades essenciais para minha carreira.
+            Minha trajetória até aqui reflete minha paixão pela tecnologia e minha constante busca por aprendizado e crescimento.
             </p>
           </div>
           <div className="col-lg-6" id="carreira">
@@ -65,7 +67,7 @@ const About: React.FC<AboutProps> = () => {
                         className="me-4"
                         style={{ width: '60px', height: '60px', borderRadius: '0%' }}/>
                       <div>
-                        <p className="card-text mb-0"><b>Universidade de Brasília</b></p>
+                        <p className="card-text mb-0"><b>Universidade de Brasília (UnB)</b></p>
                         <p className='card-text mb-0'>Estudante de Engenharia da Computação</p>
                         <p className='card-text'><i>2020 - Atualmente</i></p>
                         <p>Linguagens: <FaPython title='Python'/> <BsFiletypeSql title='SQL Light'/> <SiCplusplus title='C++'/> </p>
@@ -77,6 +79,12 @@ const About: React.FC<AboutProps> = () => {
             </div>
           </div>
         </div>
+        {/* Começo Tecnologias e Ferramentas */}
+        <div id="tituloTecnologiasFerramentas" className="col-lg-12 mt-3 d-flex justify-content-center">
+          <h2 className="text-center tituloTecnlogiasFerramentas" data-shadow="TECNOLOGIAS E FERRAMENTAS">TECNOLOGIAS E FERRAMENTAS</h2>
+        </div>
+        < Carousel />
+        {/* Fim Tecnologias e Ferramentas*/}
       </div>
     </div>
   );
