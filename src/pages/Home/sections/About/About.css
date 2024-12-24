@@ -26,36 +26,67 @@
     font-weight: bold;
 }
 
-.carousel-tecnologias {
-  overflow: hidden;
-  width: 100%; /* Ajuste conforme necessário */
+/* Carrosel */
+.carousel-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
   position: relative;
-  display: flex;
-  justify-content: center;
 }
 
-.carousel-track {
+.carousel-item {
   display: flex;
-  animation: scroll 20s linear infinite;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-icon {
-  width: 80px; /* Ajuste o tamanho conforme necessário */
-  height: auto;
-  margin: 0 20px;
-  transition: filter 0.3s ease; /* Transição suave para o efeito de cor */
+  margin: 10px 50px;
+  max-width: 80px;
+  max-height: 80px;
+  transition: transform 0.3s, filter 0.3s;
 }
 
-.grayscale {
-  filter: grayscale(100%); /* Deixa a imagem em preto e branco */
+.logo-icon.grayscale {
+  filter: grayscale(100%);
 }
 
-/* Animação contínua */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Ajuste para metade do conteúdo duplicado */
-  }
+.logo-icon:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Estilos do Slick Carousel */
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-dots {
+  bottom: 10px; /* Posiciona as bolinhas no fundo do carrossel */
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button {
+  background-color: transparent;
+  border: none;
+}
+
+.slick-dots li button:before {
+  font-size: 16px;
+  /* color: #ff0000; */
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  /* color: #ff0000; */
+  font-size: 10px;
 }

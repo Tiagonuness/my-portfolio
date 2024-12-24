@@ -15,7 +15,7 @@ const Hero = () => {
                     <h4 className="text-white text-center mt-2">
                         <Typewriter
                             options={{
-                                strings: ['Desenvolvedor Full Stack', 'Analista de Dados'],
+                                strings: ['Desenvolvedor Full Stack', 'Cientista de Dados'],
                                 autoStart: true,
                                 loop: true,
                             }}

@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>
             <div className="container">
-                <div id="navbar" className="col-lg-6 mt-2 mx-auto justify-content-center fixed-top" >
+                {/* <div id="navbar" className="col-lg-6 mt-2 mx-auto justify-content-center fixed-top" >
                     <nav>
                         <div id="bordaNavbar" className="d-flex justify-content-center align-items-center">
                             <ul className="list-unstyled d-flex col-lg-12 mt-2">
@@ -18,7 +18,7 @@ const Home = () => {
                             </ul>
                         </div>
                     </nav>
-                </div>
+                </div> */}
 
                 <div id="iconsPerfis" className="col-lg-1">
                     <ul>
