@@ -8,12 +8,12 @@ const logos = [
   { src: "/icons8-typescript.svg", alt: "Typescript", title: "Typescript" },
   { src: "/icons8-bootstrap.svg", alt: "Bootstrap", title: "Bootstrap" },
   { src: "/icons8-python.svg", alt: "Python", title: "Python" },
-  { src: "/PHP-Logo.wine.svg", alt: "PHP", title: "PHP" },
+  { src: "/new-php-logo.svg", alt: "PHP", title: "PHP" },
   { src: "/icons8-javascript.svg", alt: "Javascript", title: "Javascript" },
   { src: "/jquery-icon.svg", alt: "jQuery", title: "jQuery" },
   { src: "/icons8-c.svg", alt: "C++", title: "C++" },
   { src: "/icons8-microsoft-sql-server.svg", alt: "SQL Server", title: "SQL Server" },
-  { src: "/PostgreSQL-Logo.wine.svg", alt: "PostgreSQL", title: "PostgreSQL" },
+  { src: "/Postgresql_elephant.svg.png", alt: "PostgreSQL", title: "PostgreSQL" },
   { src: "/icons8-mysql-logo.svg", alt: "MySQL", title: "MySQL" },
   { src: "/icons8-git.svg", alt: "Git", title: "Git" },
   { src: "/icons8-github.svg", alt: "GitHub", title: "GitHub" },
@@ -27,6 +27,7 @@ const logos = [
   { src: "/icons8-notion.svg", alt: "Notion", title: "Notion" },
   { src: "/visualstudio_code-icon.svg", alt: "VS Code", title: "Visual Studio Code" },
   { src: "/logo-notepad.svg", alt: "Notepad++", title: "Notepad++" },
+  { src: "/icons8-code-blocks.svg", alt: "CodeBlocks", title: "CodeBlocks" },
   { src: "/icons8-pycharm.svg", alt: "PyCharm", title: "PyCharm" },
   { src: "/icons8-teams.svg", alt: "Teams", title: "Microsoft Teams" },
   { src: "/icons8-discord.svg", alt: "Discord", title: "Discord" },
@@ -57,13 +58,14 @@ const Carousel: React.FC = () => {
         },
       },
     ],
-  };
+    focusOnSelect: true, 
+  };  
 
   return (
     <div className="carousel-container">
       <Slider {...settings}>
         {logos.map((logo, index) => (
-          <div key={index} className="carousel-item mt-4">
+          <div key={index} className={`carousel-item mt-4 ${logo.alt === "PHP" ? "logo-php" : ""}`}>
             <img
               src={logo.src}
               alt={logo.alt}

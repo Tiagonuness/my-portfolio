@@ -8,18 +8,6 @@ const Home = () => {
     return (
         <>
             <div className="container">
-                {/* <div id="navbar" className="col-lg-6 mt-2 mx-auto justify-content-center fixed-top" >
-                    <nav>
-                        <div id="bordaNavbar" className="d-flex justify-content-center align-items-center">
-                            <ul className="list-unstyled d-flex col-lg-12 mt-2">
-                                <li className="col-lg-4 text-center"><a href="#" className="nav-link">Sobre</a></li>
-                                <li className="col-lg-4 text-center"><a href="#" className="nav-link">Habilidades</a></li>
-                                <li className="col-lg-4 text-center"><a href="#" className="nav-link">Projetos</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div> */}
-
                 <div id="iconsPerfis" className="col-lg-1">
                     <ul>
                         <li>

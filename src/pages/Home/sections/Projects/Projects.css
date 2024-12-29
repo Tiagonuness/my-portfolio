@@ -1,0 +1,11 @@
+/* CSS para animações */
+#projectsSection {
+    background-color: #000000;
+    padding: 2rem;
+}
+
+#tituloProjects {
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 20px;
+}

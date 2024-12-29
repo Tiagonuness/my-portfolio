@@ -95,19 +95,3 @@
     }
 }
 /* Barra lateral redes sociais */
-
-/* NavBar */
-#bordaNavbar {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.11);
-    border-radius: 10px;
-}
-
-#bordaNavbar ul li {
-    color: rgba(255, 255, 255, 0.397);
-}
-
-#bordaNavbar li:hover {
-    color: rgb(255, 255, 255);
-}
-/* NavBar */
